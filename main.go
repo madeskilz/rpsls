@@ -44,7 +44,10 @@ var choices = []choice{
 
 func main() {
 	router := gin.Default()
-	router.Use(cors.Default())
+	config := cors.DefaultConfig()
+	config.AllowMethods = []string{"PUT", "PATCH", "OPTIONS", "POST", "GET", "DELETE"}
+	config.AllowAllOrigins = true
+	router.Use(cors.New(config))
 	router.GET("/", index)
 	router.GET("/choices", getChoices)
 	router.GET("/choice", getChoice)
