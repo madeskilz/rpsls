@@ -25,7 +25,9 @@ Rock crushes Scissors
 2. Start your terminal
 3. Navigate to the root of this project using 'cd' command
 4. Run the following code
-''
+
+```
 go run .
-''
+```
+
 5. Th api server should successfully start at <http://localhost:8080>
